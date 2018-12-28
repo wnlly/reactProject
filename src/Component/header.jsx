@@ -31,7 +31,7 @@ class Header extends Component {
   render () {
     return (
       <div>
-        <h1 style={{color:this.state.themeColor}}>React.js标题</h1>
+        <h1 style={{color:this.props.themeColor}}>React.js标题</h1>
       </div>
     )
   }
@@ -42,5 +42,5 @@ const mapStateToProps = (state) =>{
   }
 }
 Header= connect(mapStateToProps)(Header);
-console.log(Header);
+
 export default Header

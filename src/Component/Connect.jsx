@@ -15,6 +15,7 @@ export  let connect =(mapStateToProps,mapDispatchToProps) => (WrapMent)=>{
     this.state={
     allProps:{ }
     }
+    
   }
   _updateColor(){
     const {store} = this.context;
