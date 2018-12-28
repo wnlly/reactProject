@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import  PropTypes  from 'prop-types';
 import themeColor from './themeColor';
+import  {connect }  from './Connect'
 class Header extends Component {
   static contextTypes={
     store:PropTypes.object
@@ -35,5 +36,11 @@ class Header extends Component {
     )
   }
 }
-
+const mapStateToProps = (state) =>{
+  return {
+    themeColor:state.themeColor
+  }
+}
+Header= connect(mapStateToProps)(Header);
+console.log(Header);
 export default Header

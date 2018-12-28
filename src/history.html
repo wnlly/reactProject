@@ -5,28 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+
+  <style>
+    *{
+      margin:0;
+      padding: 0;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    h1{
+      color:pink;
+
+    }
+    .jizan{
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
-  <button>go</button>
-  <button>back</button>
+  
+<div class="container">
+    <div>
 
-
-
-
-
-
-  <script>
+        <img src="" alt="">
+      </div>
+    
+      <div>
+        <span>
     
     
-      var buttones = document.getElementsByTagName('button'); 
-      console.log(buttones)
-      buttones[0].onclick = function () {
-        window.history.go(1);
-        }    //#endregion
+      </span>
+    </div>
+    <div>
+        <h1>
+            1.活动内容:<span class="jizan">集赞送温暖</span>
+          </h1>
 
-        buttones[1].addEventListener('click',function () {
-          window.history.back(-1)
-          })
-    </script>
+
+    </div>
+    
+</div>
+ 
+
 </body>
 </html>
