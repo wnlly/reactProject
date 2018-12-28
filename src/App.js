@@ -7,63 +7,62 @@ import Header from './Component/header.jsx';
 import PropTypes from 'prop-types'
 import themeColor from './Component/themeColor';
 
+import Provider from './Component/Provider';
 
-function createStore(reducer){
-  let state = null;
-  const listeners =[];
-  const  subscribe = (listener)=> listeners.push(listener);
-  const getState = () => state;
-  const dispatch = (action) =>{
-     state =reducer(state,action);
-    listeners.forEach((listener)=>listener())
-  }
-  dispatch({});
-  return {subscribe,getState,dispatch}
- }
-
-
- function reducer(state,action){
-   if(!state){
-     return{
-       themeColor:'red'
-     }
+function createStore(reducer) {
+    let state = null;
+    const listeners = [];
+    const subscribe = (listener) => listeners.push(listener);
+    const getState = () => state;
+    const dispatch = (action) => {
+        state = reducer(state, action);
+        listeners.forEach((listener) => listener())
     }
-     switch (action.type) {
-       case 'UPDATE_COLOR':
-         
-        return{
-          ...state,
-          themeColor:action.themeColor
+    dispatch({});
+    return { subscribe, getState, dispatch }
+}
+
+
+function reducer(state, action) {
+    if (!state) {
+        return {
+            themeColor: 'red'
         }
-     
-       default:
-      return state ;
-     }
+    }
+    switch (action.type) {
+        case 'UPDATE_COLOR':
 
-   
- }
- const store = createStore(reducer);
- console.log(store)
+            return {
+                ...state,
+                themeColor: action.themeColor
+            }
+
+        default:
+            return state;
+    }
+
+
+}
+const store = createStore(reducer);
+console.log(store)
 class App extends Component {
-  static childContextTypes={
-    store:PropTypes.object
-  }
-  constructor(params) {
-    super(params);
-  }
-  getChildContext(){
-    return {store}
-  }
-  render() {
-    return (
-     <div>
-     <Header></Header>
 
-     <Content></Content>
-     </div>
+    constructor(params) {
+        super(params);
+    }
 
-    );
-  }
+    render() {
+        return ( <
+            div >
+            <
+            Header > < /Header>
+
+            <
+            Content > < /Content> <
+            /div>
+
+        );
+    }
 }
 
 export default App;
