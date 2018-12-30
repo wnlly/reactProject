@@ -10,7 +10,7 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux'
 
 
-  const Listreducer =  (state = [1,2,3,4], action) => {
+  const Listreducer =  (state = [], action) => {
   switch (action.type) {
 
   case 'ADD_USER':
@@ -50,9 +50,9 @@ class UserTop extends Component{
   render(){
     return(
       <Provider store={store}>
-        <div>
+       
           <User></User>
-        </div>
+        
       </Provider>
     )
   }
