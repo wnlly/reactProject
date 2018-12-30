@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-import Header from './Component/header';
-import Content from './Component/content'
 import App from './App';
 import {HashRouter as Router,Route,Link,BrowserRouter} from 'react-router-dom'
 

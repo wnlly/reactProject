@@ -1,46 +1,12 @@
-import React, { Component } from 'react'
-
-import  PropTypes  from 'prop-types';
-import themeColor from './themeColor';
-import  {connect }  from './Connect'
-class Header extends Component {
-  static contextTypes={
-    store:PropTypes.object
+import React, { Component} from 'react' ;
+import PropTypes from 'prop-types' ;
+export default class Header extends Component{
+  static propTypes = {
+    themeColor:PropTypes.string
   }
-
-  constructor(props){
-    super(props);
-    this.state={
-      themeColor:''
-    }
-  }
-  _updateColor(){
-    const {store} = this.context;
-    console.log(store)
-    let state = store.getState();
-    console.log(store.getState())
-    this.setState({
-      themeColor:state.themeColor
-    })
-  }
-  componentDidMount(){
-    const {store} = this.context;
-    this._updateColor();
-    store.subscribe(()=>this._updateColor())
-  }
-  render () {
+  render(){
     return (
-      <div>
-        <h1 style={{color:this.props.themeColor}}>React.js标题</h1>
-      </div>
+      <h1 style={{color:this.props.themeColor}}> React title</h1>
     )
   }
 }
-const mapStateToProps = (state) =>{
-  return {
-    themeColor:state.themeColor
-  }
-}
-Header= connect(mapStateToProps)(Header);
-
-export default Header

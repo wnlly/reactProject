@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import  {connect } from './Connect'
+import  {connect } from 'react-redux'
 
 import ThemeColor from './themeColor'
 import PropTypes from 'prop-types'

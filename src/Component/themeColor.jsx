@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import  {connect }  from './Connect'
+
 import  PropTypes  from 'prop-types';
   class ThemeColor extends Component {
   static contextTypes={
@@ -29,20 +29,5 @@ import  PropTypes  from 'prop-types';
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    themeColor: state.themeColor
-  }
-}
-const  mapDispatchToProps = (dispatch) => {
-  return {
-    onSwitchColor: (color) => {
-      dispatch({
-        type: 'UPDATE_COLOR',
-        themeColor: color
-      })
-    }
-  }
-}
-ThemeColor= connect(mapStateToProps,mapDispatchToProps)(ThemeColor)
+
 export default ThemeColor
