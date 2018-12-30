@@ -14,6 +14,7 @@ import {Provider} from 'react-redux';
 import User from './Component/User';
 import UserList from './Component/UserDelete';
 import UserRouter from './Component/UserList'
+import UserTop from  './Component/userTop'
 const themeReducer =  (state, action) => {
   if (!state) {
     return {
@@ -52,6 +53,7 @@ class App extends Component {
         <UserList></UserList>
         
         <UserRouter></UserRouter>
+        <UserTop></UserTop>
       </Provider>
     );
   }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import { connect } from 'react-redux';
+ 
 class User extends Component {
   constructor(props){
     super(props);
@@ -14,13 +16,19 @@ class User extends Component {
   render () {
     return (
       <div>
-        <div style={{color:'red'}}>Name: {this.state.userList.props.id}</div>
-        <div>Age:  {this.state.userList.name}</div>
-        <div>Gender: {this.state.userList.title} </div>
+        <div style={{color:'red'}}>Name: </div>
+        <div>Age: </div>
+        <div>Gender:  </div>
         <button>删除</button>
       </div>
     )
   }
 }
+ const mapStateToProps = (state, ownProps) => {
+  return {
+    datalist: state
+  }
+}
 
+User = connect(mapStateToProps)(User)
 export default User
