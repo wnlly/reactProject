@@ -10,6 +10,10 @@ import PropTypes from 'prop-types'
   }
   
   render() {
+
+
+
+    
     return (
       <div>
         <p style={{color:this.props.themeColor}}>React.js内容</p>
