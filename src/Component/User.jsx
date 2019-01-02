@@ -6,23 +6,59 @@ class User extends Component {
   constructor(props){
     super(props);
     this.state={
-      userList:this.props
+      userList:''
     }
   }
   componentDidMount(){
-    console.log(this.props);
-    console.log(this.state.userList)
+    console.log(this.props.datalist);
+ 
+
+
+    this.setState({
+      userList:this.props.datalist
+    })
   }
+
+  // componentDidUpdate(){
+   
+  //   if(!this.props.datalist ){
+  //     return ;
+  //   }
+
+  //  else{
+
+  //   this.setState({
+  //     userList:this.props.datalist
+  //   })
+  // }
+  
   render () {
-    return (
-      <div>
-        <div style={{color:'red'}}>Name: </div>
-        <div>Age: </div>
-        <div>Gender:  </div>
-        <button>删除</button>
-      </div>
-    )
-  }
+
+    const user = this.props.user||[];
+    const onDelete = this.props.onDelete;
+    const index= this.props.index;
+
+    console.log(user,onDelete,index)
+    
+   
+
+    
+      return (
+       
+      
+      
+     
+          <div>
+         
+            <div>Name:  {user.username}</div> 
+            <div>Age: {user.age}</div>
+            <div>Gender: {user.gender}  </div>
+            <button onClick= {() => {onDelete(index)}}>删除</button>
+        </div>
+
+     
+      )
+    }
 }
  const mapStateToProps = (state, ownProps) => {
   return {

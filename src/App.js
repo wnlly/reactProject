@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 import {createStore}  from 'redux'
@@ -40,9 +40,7 @@ let users= {
   name:'1234'
 }
 class App extends Component {
-  constructor (params) {
-    super (params);
-  }
+  
 
   render () {
     return (

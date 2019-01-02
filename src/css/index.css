@@ -1,0 +1,20 @@
+span {
+  color: red;
+  font-size: 16px;
+}
+span a {
+  text-decoration: none;
+}
+span a img {
+  display: block;
+}
+span div {
+  display: block;
+}
+span div img {
+  background: url() no-repeat top left;
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+}

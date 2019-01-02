@@ -2,7 +2,8 @@ import React,{Component} from 'react';
 
 import  PropTypes from 'prop-types';
 
-import User from '../Component/User'
+import UserDelete from  '../Component/UserDelete';
+import '../css/index.css'
 
 
 import {Provider} from 'react-redux';
@@ -18,9 +19,11 @@ import {createStore} from 'redux'
 
     case 'DELETE_USER':
   
+    let arrays = [...state];
+    return  state =  arrays.prototype.splice(action.index,1);
+
   
-  
-    return [...state.slice(0,action.index-1),...state.slice(action.index+1,action.length)];
+   
   
     case 'UPDATE_USER':
     let  array = [...state];
@@ -50,8 +53,14 @@ class UserTop extends Component{
   render(){
     return(
       <Provider store={store}>
+
+      <div className="container">
        
-          <User></User>
+          
+
+          <UserDelete></UserDelete>
+          
+          </div>
         
       </Provider>
     )
