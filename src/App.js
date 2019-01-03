@@ -11,10 +11,12 @@ import themeColor from './Component/themeColor';
 
 import {Provider} from 'react-redux';
 
+
 import User from './Component/User';
 import UserList from './Component/UserDelete';
 import UserRouter from './Component/UserList'
 import UserTop from  './Component/userTop'
+import Family from './Component/Family';
 const themeReducer =  (state, action) => {
   if (!state) {
     return {
@@ -47,11 +49,11 @@ class App extends Component {
       <Provider store ={store}>
         <Header />
         <Content> </Content>
-        <User props={users}></User>
-        <UserList></UserList>
+       
         
         <UserRouter></UserRouter>
         <UserTop></UserTop>
+        <Family></Family>
       </Provider>
     );
   }

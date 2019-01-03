@@ -123,6 +123,8 @@ class UsersList extends Component {
             <label>Female: <input type='radio' name='gender' value='female' onChange={this.addInformationGender.bind(this)}  ref= 'inputRadio'/></label>
           </div>
           <button onClick ={this.addInformation.bind(this)}>增加</button>
+          <button> 修改信息</button>
+          <div style={{width:'100px',height:'100px',backgroundColor:'rgba(244,21,23,0.8)'}} className= 'css3Animation'></div>
         </div>
        
        <div className='users-list'>

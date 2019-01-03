@@ -19,9 +19,7 @@ import {createStore} from 'redux'
 
     case 'DELETE_USER':
   
-    let arrays = [...state];
-    return  state =  arrays.prototype.splice(action.index,1);
-
+    return  [...state.slice(0,action.index),...state.slice(action.index+1,action.length)]
   
    
   

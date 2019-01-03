@@ -33,3 +33,50 @@
    width:800px;
    margin:  0 auto;
  }
+
+
+ .add-user{
+   width:300px;
+   background: #ddd;
+
+   height: 200px;
+
+   
+ }
+
+ .add-user div{
+   padding: 10px;
+   margin-top:5px;
+   position: relative;
+ }
+ .add-user input[type='text'],input[type='number']{
+   position: relative;
+   float: right;
+
+   outline: none;
+   border:1px solid #ccc;
+   border-radius: 3px;
+   padding: 5px  0;
+ }
+
+ .css3Animation {
+   animation: palysGround 3s;
+  -webkit-animation:  palysGround 5s;
+
+   -webkit-transform:  translateX(200px);
+   -webkit-transform: translate3d(-30deg) perspective(1);
+ }
+
+
+ @-moz-keyframes palysGround{
+     0% {background-color:yellow}
+     50% {background-color:  green}
+     100%  {background-color: yellow }
+ }
+
+ @keyframes palysGround{
+  0% {background-color:yellow}
+     50% {background-color:  green}
+     100%  {background-color: yellow }
+ }
+
